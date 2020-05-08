@@ -1,8 +1,11 @@
 name: Build RM2100 R2100
 
 on: 
-  release:
-    types: [published]
+  push:
+    branches:
+      - master
+    paths:
+      - '.github/workflows/build-AC2100.yml'  
 #  push:
 #    tags:
 #    - 'v*'
