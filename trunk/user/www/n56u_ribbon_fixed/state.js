@@ -80,11 +80,6 @@ function notify_status_internet(wan_internet){
 		update_internet_status();
 }
 
-function notify_status_vpn_client(vpnc_state){
-	if((location.pathname == "/vpncli.asp") && (typeof(update_vpnc_status) === 'function'))
-		update_vpnc_status(vpnc_state);
-}
-
 function get_changed_status(){
 	var $j = jQuery.noConflict();
 	$j.ajax({
@@ -590,7 +585,7 @@ if (found_app_wyy()){
 
 //Level 1 Menu in Gateway, Router mode
 menuL1_title = new Array("", "<#menu1#>", "", "<#menu2#>", "<#menu6#>", "<#menu4#>", "<#menu5_8#>", "<#menu5#>");
-menuL1_link = new Array("", "index.asp", "", "vpnsrv.asp", "vpncli.asp", "Main_TrafficMonitor_realtime.asp", "Advanced_System_Info.asp", "as.asp");
+menuL1_link = new Array("", "index.asp", "", "Main_TrafficMonitor_realtime.asp", "Advanced_System_Info.asp", "as.asp");
 menuL1_icon = new Array("", "icon-home", "icon-hdd", "icon-retweet", "icon-globe", "icon-tasks", "icon-random", "icon-wrench");
 
 function show_menu(L1, L2, L3){
