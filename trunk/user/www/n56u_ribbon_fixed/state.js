@@ -80,6 +80,11 @@ function notify_status_internet(wan_internet){
 		update_internet_status();
 }
 
+function notify_status_vpn_client(vpnc_state){
+	if((location.pathname == "/vpncli.asp") && (typeof(update_vpnc_status) === 'function'))
+		update_vpnc_status(vpnc_state);
+}
+
 function get_changed_status(){
 	var $j = jQuery.noConflict();
 	$j.ajax({
