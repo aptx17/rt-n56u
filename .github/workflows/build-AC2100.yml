@@ -103,8 +103,7 @@ jobs:
       run: |
         rm -rf ./artifact/
         mkdir -p ./artifact/
-        gzip /opt/images/*.trx
-        cp /opt/images/*.trx.gz ./artifact/
+        cp /opt/images/*.trx ./artifact/
     - name: Upload Artifact
       uses: actions/upload-artifact@master
       with:
