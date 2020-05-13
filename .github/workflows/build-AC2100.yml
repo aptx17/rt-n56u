@@ -1,4 +1,4 @@
-name: Build RM2100 R2100
+name: Build R2100
 
 on: 
   push:
@@ -38,7 +38,7 @@ jobs:
         mkdir -p /opt/images/
     - name: Build Firmware
       env:
-        TNAME: "RM2100 R2100"
+        TNAME: "R2100"
       run: |
         cwd=`pwd`
         CONFIG_TOOLCHAIN_DIR=${cwd//\//\\\/}\\/toolchain-mipsel
